@@ -14,7 +14,11 @@ class SettingsViewController: UIViewController {
     
     let tableView = UITableView.init(frame: CGRect.zero, style: .insetGrouped)
     var safeArea: UILayoutGuide!
-    let data = [["0,0", "0,1", "0,2"],["1,0", "1,1", "1,2"],]
+    let data = [["Saved Messages", "Recent Calls", "Devices", "Chat Folders"],
+                ["Notifications and Sounds", "Privacy and Security", "Data and Storage", "Appearance", "Language", "Stickers"],
+                ["Apple Watch"],
+                ["Ask a Question", "Telegram FAQ"]
+    ]
     
     @objc func editTapped() {
         self.navigationController?.present(editViewController, animated: true, completion: nil)
@@ -63,11 +67,71 @@ extension SettingsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
         cell.textLabel?.text = self.data[indexPath.section][indexPath.row]
-      
+        
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "bookmark")
+            case 1:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "phone")
+             case 2:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "desktopcomputer")
+            case 3:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "briefcase")
+            default:
+                cell.accessoryType = .none
+            }
+        case 1:
+            switch indexPath.row {
+            case 0:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "bell")
+            case 1:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "lock")
+            case 2:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "archivebox")
+            case 3:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "pencil.and.outline")
+            case 4:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "globe")
+            case 5:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "rosette")
+            default:
+                cell.accessoryType = .none
+            }
+        case 2:
+            cell.accessoryType = .disclosureIndicator
+            cell.imageView?.image = UIImage(systemName: "clock")
+        case 3:
+            switch indexPath.row {
+            case 0:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "text.bubble")
+            case 1:
+                cell.accessoryType = .disclosureIndicator
+                cell.imageView?.image = UIImage(systemName: "questionmark")
+            default:
+                cell.accessoryType = .none
+            }
+        default:
+            cell.accessoryType = .none
+        }
+        
         return cell
-    }
+        }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.data.count
