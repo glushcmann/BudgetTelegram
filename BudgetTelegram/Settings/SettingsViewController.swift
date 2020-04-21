@@ -17,11 +17,12 @@ class SettingsViewController: UIViewController {
     let data = [["Saved Messages", "Recent Calls", "Devices", "Chat Folders"],
                 ["Notifications and Sounds", "Privacy and Security", "Data and Storage", "Appearance", "Language", "Stickers"],
                 ["Apple Watch"],
-                ["Ask a Question", "Telegram FAQ"]
+                ["Ask a Question", "BudgetTelegram FAQ"]
     ]
     
     @objc func editTapped() {
         self.navigationController?.present(editViewController, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(editViewController, animated: true)
     }
 
     func tableViewSetup() {

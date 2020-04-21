@@ -13,8 +13,10 @@ class EditViewController: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         
         view.backgroundColor = .red
-        
         super.viewDidLoad()
+        self.navigationItem.title = "Edit Profile"
+        self.view.backgroundColor = .red
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.delegate = self
     }
 }

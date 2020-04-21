@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let contactsVC = ContactsViewController()
+    let contactsNavigationController = ContactsNavigationController()
     let callsVC = CallsViewController()
     let chatsVC = ChatsViewController()
     let settingsNavigationController = SettingsNavigationController()
@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let contactsItem = UITabBarItem()
         contactsItem.title = "Contacts"
         contactsItem.image = UIImage(systemName: "person.fill")
-        contactsVC.tabBarItem = contactsItem
+        contactsNavigationController.tabBarItem = contactsItem
         
         let callsItem = UITabBarItem()
         callsItem.title = "Calls"
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         settingsNavigationController.tabBarItem = settingsItem
 
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [contactsVC, callsVC, chatsVC, settingsNavigationController]
+        tabBarController.viewControllers = [contactsNavigationController, callsVC, chatsVC, settingsNavigationController]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController

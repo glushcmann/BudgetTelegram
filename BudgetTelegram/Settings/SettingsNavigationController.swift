@@ -15,4 +15,5 @@ class SettingsNavigationController: UINavigationController {
     override func viewDidLoad() {
         self.viewControllers = [vc]
     }
+    
 }
