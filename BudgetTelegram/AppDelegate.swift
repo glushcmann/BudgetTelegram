@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let contactsNavigationController = ContactsNavigationController()
     let callsNavigationController = CallsNavigationController()
-    let chatsVC = ChatsViewController()
+    let chatsNavigationController = ChatsNavigationController()
     let settingsNavigationController = SettingsNavigationController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let chatsItem = UITabBarItem()
         chatsItem.title = "Chats"
         chatsItem.image = UIImage(systemName: "message.fill")
-        chatsVC.tabBarItem = chatsItem
+        chatsNavigationController.tabBarItem = chatsItem
         
         let settingsItem = UITabBarItem()
         settingsItem.title = "Settings"
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         settingsNavigationController.tabBarItem = settingsItem
 
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [contactsNavigationController, callsNavigationController, chatsVC, settingsNavigationController]
+        tabBarController.viewControllers = [contactsNavigationController, callsNavigationController, chatsNavigationController, settingsNavigationController]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController

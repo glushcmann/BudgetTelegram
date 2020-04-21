@@ -12,6 +12,9 @@
 		1163162E244F367F007E34E3 /* ContactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163162D244F367F007E34E3 /* ContactsNavigationController.swift */; };
 		11631630244F38ED007E34E3 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163162F244F38ED007E34E3 /* AddContactViewController.swift */; };
 		11631632244F3D56007E34E3 /* CallsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631631244F3D56007E34E3 /* CallsNavigationController.swift */; };
+		11631634244F4E51007E34E3 /* NewCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631633244F4E51007E34E3 /* NewCallViewController.swift */; };
+		11631636244F516E007E34E3 /* ChatsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631635244F516E007E34E3 /* ChatsNavigationController.swift */; };
+		11631638244F5296007E34E3 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631637244F5296007E34E3 /* NewChatViewController.swift */; };
 		11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */; };
 		11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */; };
 		11F2F738244B0C8100F6ECD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F2F737244B0C8100F6ECD2 /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 		1163162D244F367F007E34E3 /* ContactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNavigationController.swift; sourceTree = "<group>"; };
 		1163162F244F38ED007E34E3 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		11631631244F3D56007E34E3 /* CallsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsNavigationController.swift; sourceTree = "<group>"; };
+		11631633244F4E51007E34E3 /* NewCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCallViewController.swift; sourceTree = "<group>"; };
+		11631635244F516E007E34E3 /* ChatsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsNavigationController.swift; sourceTree = "<group>"; };
+		11631637244F5296007E34E3 /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
 		11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		11F2F72B244B0C7D00F6ECD2 /* BudgetTelegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTelegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,8 +70,9 @@
 		1121D044244B3A180012DCF4 /* Calls */ = {
 			isa = PBXGroup;
 			children = (
-				11F2F744244B12DF00F6ECD2 /* CallsViewController.swift */,
 				11631631244F3D56007E34E3 /* CallsNavigationController.swift */,
+				11F2F744244B12DF00F6ECD2 /* CallsViewController.swift */,
+				11631633244F4E51007E34E3 /* NewCallViewController.swift */,
 			);
 			path = Calls;
 			sourceTree = "<group>";
@@ -73,7 +80,9 @@
 		1121D045244B3A2D0012DCF4 /* Chats */ = {
 			isa = PBXGroup;
 			children = (
+				11631635244F516E007E34E3 /* ChatsNavigationController.swift */,
 				11F2F746244B12ED00F6ECD2 /* ChatsViewController.swift */,
+				11631637244F5296007E34E3 /* NewChatViewController.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -200,7 +209,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1163162E244F367F007E34E3 /* ContactsNavigationController.swift in Sources */,
+				11631636244F516E007E34E3 /* ChatsNavigationController.swift in Sources */,
 				11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */,
+				11631634244F4E51007E34E3 /* NewCallViewController.swift in Sources */,
 				11F2F747244B12ED00F6ECD2 /* ChatsViewController.swift in Sources */,
 				11F2F745244B12DF00F6ECD2 /* CallsViewController.swift in Sources */,
 				11631632244F3D56007E34E3 /* CallsNavigationController.swift in Sources */,
@@ -209,6 +220,7 @@
 				11F2F743244B12BD00F6ECD2 /* ContactsViewController.swift in Sources */,
 				11F2F749244B12FC00F6ECD2 /* SettingsViewController.swift in Sources */,
 				11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */,
+				11631638244F5296007E34E3 /* NewChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

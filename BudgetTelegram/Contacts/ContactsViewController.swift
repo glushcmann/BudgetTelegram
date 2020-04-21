@@ -38,7 +38,7 @@ class ContactsViewController: UIViewController {
         self.navigationItem.title = "Contacts"
         self.view.backgroundColor = .white
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addContactTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addContactTapped))
         
         let search = UISearchController(searchResultsController: nil)
         search.obscuresBackgroundDuringPresentation = false
