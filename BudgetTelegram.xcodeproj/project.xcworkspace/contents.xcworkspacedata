@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Practice.xcodeproj">
+      location = "self:/Users/nikita/Desktop/Xcode/xcode apps/Practice/BudgetTelegram.xcodeproj">
    </FileRef>
 </Workspace>

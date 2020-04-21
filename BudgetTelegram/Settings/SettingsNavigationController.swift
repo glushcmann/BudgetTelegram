@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsNavigationController: UINavigationController {
 
+    let vc = SettingsViewController()
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.viewControllers = [vc]
     }
-
-
 }
-
