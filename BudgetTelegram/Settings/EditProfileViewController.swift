@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditViewController: UIViewController, UINavigationControllerDelegate {
+class EditProfileViewController: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         

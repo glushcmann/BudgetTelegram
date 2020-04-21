@@ -11,7 +11,8 @@
 		1163162C244F210A007E34E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1163162B244F210A007E34E3 /* Default-568h@2x.png */; };
 		1163162E244F367F007E34E3 /* ContactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163162D244F367F007E34E3 /* ContactsNavigationController.swift */; };
 		11631630244F38ED007E34E3 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163162F244F38ED007E34E3 /* AddContactViewController.swift */; };
-		11C6B498244CC3A5001AC303 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B497244CC3A5001AC303 /* EditViewController.swift */; };
+		11631632244F3D56007E34E3 /* CallsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631631244F3D56007E34E3 /* CallsNavigationController.swift */; };
+		11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */; };
 		11C6B49C244CCD73001AC303 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B49B244CCD73001AC303 /* SettingsTableViewController.swift */; };
 		11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */; };
 		11F2F738244B0C8100F6ECD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F2F737244B0C8100F6ECD2 /* Assets.xcassets */; };
@@ -27,7 +28,8 @@
 		1163162B244F210A007E34E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1163162D244F367F007E34E3 /* ContactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNavigationController.swift; sourceTree = "<group>"; };
 		1163162F244F38ED007E34E3 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
-		11C6B497244CC3A5001AC303 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		11631631244F3D56007E34E3 /* CallsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsNavigationController.swift; sourceTree = "<group>"; };
+		11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		11C6B49B244CCD73001AC303 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		11F2F72B244B0C7D00F6ECD2 /* BudgetTelegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTelegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 				1135253A244B32DE0057D734 /* SettingsNavigationController.swift */,
 				11F2F748244B12FC00F6ECD2 /* SettingsViewController.swift */,
 				11C6B49B244CCD73001AC303 /* SettingsTableViewController.swift */,
-				11C6B497244CC3A5001AC303 /* EditViewController.swift */,
+				11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				11F2F744244B12DF00F6ECD2 /* CallsViewController.swift */,
+				11631631244F3D56007E34E3 /* CallsNavigationController.swift */,
 			);
 			path = Calls;
 			sourceTree = "<group>";
@@ -203,11 +206,12 @@
 				11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */,
 				11F2F747244B12ED00F6ECD2 /* ChatsViewController.swift in Sources */,
 				11F2F745244B12DF00F6ECD2 /* CallsViewController.swift in Sources */,
+				11631632244F3D56007E34E3 /* CallsNavigationController.swift in Sources */,
 				1135253B244B32DE0057D734 /* SettingsNavigationController.swift in Sources */,
 				11631630244F38ED007E34E3 /* AddContactViewController.swift in Sources */,
 				11F2F743244B12BD00F6ECD2 /* ContactsViewController.swift in Sources */,
 				11F2F749244B12FC00F6ECD2 /* SettingsViewController.swift in Sources */,
-				11C6B498244CC3A5001AC303 /* EditViewController.swift in Sources */,
+				11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */,
 				11C6B49C244CCD73001AC303 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

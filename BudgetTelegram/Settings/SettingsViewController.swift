@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    let editViewController = EditViewController()
+    let editProfileViewController = EditProfileViewController()
     
     let tableView = UITableView.init(frame: CGRect.zero, style: .insetGrouped)
     var safeArea: UILayoutGuide!
@@ -21,23 +21,8 @@ class SettingsViewController: UIViewController {
     ]
     
     @objc func editTapped() {
-        self.navigationController?.present(editViewController, animated: true, completion: nil)
+        self.navigationController?.present(editProfileViewController, animated: true, completion: nil)
 //        self.navigationController?.pushViewController(editViewController, animated: true)
-    }
-
-    func tableViewSetup() {
-        
-        view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
-            tableView.rightAnchor.constraint(equalTo: view.rightAnchor)
-        ])
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
     }
     
     override func loadView() {
@@ -136,6 +121,21 @@ extension SettingsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.data.count
+    }
+    
+    func tableViewSetup() {
+        
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor)
+        ])
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
     }
 }
 

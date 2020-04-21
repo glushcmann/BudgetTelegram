@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     let contactsNavigationController = ContactsNavigationController()
-    let callsVC = CallsViewController()
+    let callsNavigationController = CallsNavigationController()
     let chatsVC = ChatsViewController()
     let settingsNavigationController = SettingsNavigationController()
     
@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let callsItem = UITabBarItem()
         callsItem.title = "Calls"
         callsItem.image = UIImage(systemName: "phone.fill")
-        callsVC.tabBarItem = callsItem
+        callsNavigationController.tabBarItem = callsItem
         
         let chatsItem = UITabBarItem()
         chatsItem.title = "Chats"
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         settingsNavigationController.tabBarItem = settingsItem
 
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [contactsNavigationController, callsVC, chatsVC, settingsNavigationController]
+        tabBarController.viewControllers = [contactsNavigationController, callsNavigationController, chatsVC, settingsNavigationController]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController
