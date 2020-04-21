@@ -13,7 +13,6 @@
 		11631630244F38ED007E34E3 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163162F244F38ED007E34E3 /* AddContactViewController.swift */; };
 		11631632244F3D56007E34E3 /* CallsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631631244F3D56007E34E3 /* CallsNavigationController.swift */; };
 		11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */; };
-		11C6B49C244CCD73001AC303 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B49B244CCD73001AC303 /* SettingsTableViewController.swift */; };
 		11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */; };
 		11F2F738244B0C8100F6ECD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F2F737244B0C8100F6ECD2 /* Assets.xcassets */; };
 		11F2F73B244B0C8100F6ECD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F2F739244B0C8100F6ECD2 /* LaunchScreen.storyboard */; };
@@ -30,7 +29,6 @@
 		1163162F244F38ED007E34E3 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		11631631244F3D56007E34E3 /* CallsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsNavigationController.swift; sourceTree = "<group>"; };
 		11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		11C6B49B244CCD73001AC303 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		11F2F72B244B0C7D00F6ECD2 /* BudgetTelegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTelegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F2F737244B0C8100F6ECD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 			children = (
 				1135253A244B32DE0057D734 /* SettingsNavigationController.swift */,
 				11F2F748244B12FC00F6ECD2 /* SettingsViewController.swift */,
-				11C6B49B244CCD73001AC303 /* SettingsTableViewController.swift */,
 				11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */,
 			);
 			path = Settings;
@@ -212,7 +209,6 @@
 				11F2F743244B12BD00F6ECD2 /* ContactsViewController.swift in Sources */,
 				11F2F749244B12FC00F6ECD2 /* SettingsViewController.swift in Sources */,
 				11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */,
-				11C6B49C244CCD73001AC303 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
