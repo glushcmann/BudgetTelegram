@@ -12,7 +12,7 @@ class SettingsViewController: UIViewController {
     
     let editProfileViewController = EditProfileViewController()
     
-    let tableView = UITableView.init(frame: CGRect.zero, style: .insetGrouped)
+    let tableView = UITableView.init(frame: CGRect.zero, style: .grouped)
     var safeArea: UILayoutGuide!
     let data = [["Saved Messages", "Recent Calls", "Devices", "Chat Folders"],
                 ["Notifications and Sounds", "Privacy and Security", "Data and Storage", "Appearance", "Language", "Stickers"],
@@ -40,7 +40,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Settings"
         self.view.backgroundColor = .white
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTapped))
         
     }
@@ -131,7 +131,7 @@ extension SettingsViewController: UITableViewDataSource {
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
         

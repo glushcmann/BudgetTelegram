@@ -10,10 +10,10 @@ import UIKit
 
 class CallsNavigationController: UINavigationController {
     
-    let vc = CallsViewController()
+    let callsVC = CallsViewController()
     
     override func viewDidLoad() {
-        self.viewControllers = [vc]
+        self.viewControllers = [callsVC]
     }
     
 }

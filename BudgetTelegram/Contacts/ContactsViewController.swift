@@ -12,7 +12,7 @@ class ContactsViewController: UIViewController {
 
     let addContactViewController = AddContactViewController()
     
-    let tableView = UITableView.init(frame: CGRect.zero, style: .insetGrouped)
+    let tableView = UITableView.init(frame: CGRect.zero, style: .plain)
     let data = ["1", "2", "3", "4"]
     var safeArea: UILayoutGuide!
     
@@ -37,7 +37,7 @@ class ContactsViewController: UIViewController {
         
         self.navigationItem.title = "Contacts"
         self.view.backgroundColor = .white
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addContactTapped))
         
         let search = UISearchController(searchResultsController: nil)
@@ -70,7 +70,7 @@ extension ContactsViewController: UITableViewDataSource {
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
         

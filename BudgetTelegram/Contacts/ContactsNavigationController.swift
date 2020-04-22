@@ -10,10 +10,10 @@ import UIKit
 
 class ContactsNavigationController: UINavigationController {
     
-    let vc = ContactsViewController()
+    let contactsVC = ContactsViewController()
     
     override func viewDidLoad() {
-        self.viewControllers = [vc]
+        self.viewControllers = [contactsVC]
     }
     
 }

@@ -15,6 +15,11 @@
 		11631634244F4E51007E34E3 /* NewCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631633244F4E51007E34E3 /* NewCallViewController.swift */; };
 		11631636244F516E007E34E3 /* ChatsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631635244F516E007E34E3 /* ChatsNavigationController.swift */; };
 		11631638244F5296007E34E3 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631637244F5296007E34E3 /* NewChatViewController.swift */; };
+		1187F1E324504A5300CCDF2A /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187F1E224504A5300CCDF2A /* Conversation.swift */; };
+		1187F1E624504A8600CCDF2A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187F1E524504A8600CCDF2A /* Message.swift */; };
+		1187F1E824504A9400CCDF2A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187F1E724504A9400CCDF2A /* User.swift */; };
+		1187F1EA24504AA000CCDF2A /* MediaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187F1E924504AA000CCDF2A /* MediaObject.swift */; };
+		1187F1EC24507F3200CCDF2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1187F1EB24507F3200CCDF2A /* GoogleService-Info.plist */; };
 		11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */; };
 		11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */; };
 		11F2F738244B0C8100F6ECD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F2F737244B0C8100F6ECD2 /* Assets.xcassets */; };
@@ -23,9 +28,11 @@
 		11F2F745244B12DF00F6ECD2 /* CallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F744244B12DF00F6ECD2 /* CallsViewController.swift */; };
 		11F2F747244B12ED00F6ECD2 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F746244B12ED00F6ECD2 /* ChatsViewController.swift */; };
 		11F2F749244B12FC00F6ECD2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F748244B12FC00F6ECD2 /* SettingsViewController.swift */; };
+		CA718AB786B30A5106EA3DFE /* Pods_BudgetTelegram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8153EDE41B77AD5AE26E9CC /* Pods_BudgetTelegram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		112C2FD36C0F04D21AC60E43 /* Pods-BudgetTelegram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTelegram.release.xcconfig"; path = "Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram.release.xcconfig"; sourceTree = "<group>"; };
 		1135253A244B32DE0057D734 /* SettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
 		1163162B244F210A007E34E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1163162D244F367F007E34E3 /* ContactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNavigationController.swift; sourceTree = "<group>"; };
@@ -34,6 +41,11 @@
 		11631633244F4E51007E34E3 /* NewCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCallViewController.swift; sourceTree = "<group>"; };
 		11631635244F516E007E34E3 /* ChatsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsNavigationController.swift; sourceTree = "<group>"; };
 		11631637244F5296007E34E3 /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
+		1187F1E224504A5300CCDF2A /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		1187F1E524504A8600CCDF2A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1187F1E724504A9400CCDF2A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1187F1E924504AA000CCDF2A /* MediaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaObject.swift; sourceTree = "<group>"; };
+		1187F1EB24507F3200CCDF2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		11F2F72B244B0C7D00F6ECD2 /* BudgetTelegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTelegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +56,8 @@
 		11F2F744244B12DF00F6ECD2 /* CallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsViewController.swift; sourceTree = "<group>"; };
 		11F2F746244B12ED00F6ECD2 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		11F2F748244B12FC00F6ECD2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7DF00357E323E0FB1267E616 /* Pods-BudgetTelegram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTelegram.debug.xcconfig"; path = "Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram.debug.xcconfig"; sourceTree = "<group>"; };
+		A8153EDE41B77AD5AE26E9CC /* Pods_BudgetTelegram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudgetTelegram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA718AB786B30A5106EA3DFE /* Pods_BudgetTelegram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +121,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1187F1E424504A5900CCDF2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1187F1E224504A5300CCDF2A /* Conversation.swift */,
+				1187F1E524504A8600CCDF2A /* Message.swift */,
+				1187F1E724504A9400CCDF2A /* User.swift */,
+				1187F1E924504AA000CCDF2A /* MediaObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		11F2F722244B0C7D00F6ECD2 = {
 			isa = PBXGroup;
 			children = (
 				1163162B244F210A007E34E3 /* Default-568h@2x.png */,
 				11F2F72D244B0C7D00F6ECD2 /* BudgetTelegram */,
 				11F2F72C244B0C7D00F6ECD2 /* Products */,
+				47DFE5EF07C9C0B96CF0A4BE /* Pods */,
+				A48C372A4572CC6EE59368F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,10 +159,30 @@
 				1121D044244B3A180012DCF4 /* Calls */,
 				1121D045244B3A2D0012DCF4 /* Chats */,
 				1121D043244B39FC0012DCF4 /* Settings */,
+				1187F1E424504A5900CCDF2A /* Model */,
 				1121D047244B3A710012DCF4 /* Resources */,
 				11F2F73C244B0C8100F6ECD2 /* Info.plist */,
+				1187F1EB24507F3200CCDF2A /* GoogleService-Info.plist */,
 			);
 			path = BudgetTelegram;
+			sourceTree = "<group>";
+		};
+		47DFE5EF07C9C0B96CF0A4BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DF00357E323E0FB1267E616 /* Pods-BudgetTelegram.debug.xcconfig */,
+				112C2FD36C0F04D21AC60E43 /* Pods-BudgetTelegram.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A48C372A4572CC6EE59368F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8153EDE41B77AD5AE26E9CC /* Pods_BudgetTelegram.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11F2F73F244B0C8100F6ECD2 /* Build configuration list for PBXNativeTarget "BudgetTelegram" */;
 			buildPhases = (
+				A720231A5CB5802E917F9690 /* [CP] Check Pods Manifest.lock */,
 				11F2F727244B0C7D00F6ECD2 /* Sources */,
 				11F2F728244B0C7D00F6ECD2 /* Frameworks */,
 				11F2F729244B0C7D00F6ECD2 /* Resources */,
+				1B91EB51CD2BF6A5477CE89E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,12 +246,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F2F73B244B0C8100F6ECD2 /* LaunchScreen.storyboard in Resources */,
+				1187F1EC24507F3200CCDF2A /* GoogleService-Info.plist in Resources */,
 				11F2F738244B0C8100F6ECD2 /* Assets.xcassets in Resources */,
 				1163162C244F210A007E34E3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B91EB51CD2BF6A5477CE89E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A720231A5CB5802E917F9690 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BudgetTelegram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11F2F727244B0C7D00F6ECD2 /* Sources */ = {
@@ -212,13 +305,17 @@
 				11631636244F516E007E34E3 /* ChatsNavigationController.swift in Sources */,
 				11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */,
 				11631634244F4E51007E34E3 /* NewCallViewController.swift in Sources */,
+				1187F1E824504A9400CCDF2A /* User.swift in Sources */,
+				1187F1E324504A5300CCDF2A /* Conversation.swift in Sources */,
 				11F2F747244B12ED00F6ECD2 /* ChatsViewController.swift in Sources */,
 				11F2F745244B12DF00F6ECD2 /* CallsViewController.swift in Sources */,
 				11631632244F3D56007E34E3 /* CallsNavigationController.swift in Sources */,
 				1135253B244B32DE0057D734 /* SettingsNavigationController.swift in Sources */,
+				1187F1EA24504AA000CCDF2A /* MediaObject.swift in Sources */,
 				11631630244F38ED007E34E3 /* AddContactViewController.swift in Sources */,
 				11F2F743244B12BD00F6ECD2 /* ContactsViewController.swift in Sources */,
 				11F2F749244B12FC00F6ECD2 /* SettingsViewController.swift in Sources */,
+				1187F1E624504A8600CCDF2A /* Message.swift in Sources */,
 				11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */,
 				11631638244F5296007E34E3 /* NewChatViewController.swift in Sources */,
 			);
@@ -354,6 +451,7 @@
 		};
 		11F2F740244B0C8100F6ECD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DF00357E323E0FB1267E616 /* Pods-BudgetTelegram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -363,7 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = glushchenko.nikita.Practice;
+				PRODUCT_BUNDLE_IDENTIFIER = glushchenko.nikita.BudgetTelegram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -372,6 +470,7 @@
 		};
 		11F2F741244B0C8100F6ECD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 112C2FD36C0F04D21AC60E43 /* Pods-BudgetTelegram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -381,7 +480,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = glushchenko.nikita.Practice;
+				PRODUCT_BUNDLE_IDENTIFIER = glushchenko.nikita.BudgetTelegram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

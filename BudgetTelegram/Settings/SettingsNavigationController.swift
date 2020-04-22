@@ -10,10 +10,10 @@ import UIKit
 
 class SettingsNavigationController: UINavigationController {
 
-    let vc = SettingsViewController()
+    let settingsVC = SettingsViewController()
     
     override func viewDidLoad() {
-        self.viewControllers = [vc]
+        self.viewControllers = [settingsVC]
     }
     
 }

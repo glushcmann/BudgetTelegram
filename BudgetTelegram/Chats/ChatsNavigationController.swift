@@ -10,10 +10,10 @@ import UIKit
 
 class ChatsNavigationController: UINavigationController {
 
-    let vc = ChatsViewController()
+    let chatsVC = ChatsViewController()
     
     override func viewDidLoad() {
-        self.viewControllers = [vc]
+        self.viewControllers = [chatsVC]
     }
     
 }
