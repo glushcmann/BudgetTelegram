@@ -27,8 +27,7 @@ class ChatsController: UICollectionViewController, UICollectionViewDelegateFlowL
         super.viewDidLoad()
 
         self.navigationItem.title = "Chats"
-//        self.view.backgroundColor = .white
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editChatTapped))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil"),style: .plain, target: self, action: #selector(newChatTapped))
 
@@ -37,7 +36,7 @@ class ChatsController: UICollectionViewController, UICollectionViewDelegateFlowL
         search.searchBar.placeholder = "Search for messages or users"
         navigationItem.searchController = search
         
-//        collectionView?.backgroundColor = .white
+        collectionView?.backgroundColor = .systemBackground
         collectionView?.alwaysBounceVertical = true
         collectionView?.register(MessageCell.self, forCellWithReuseIdentifier: cellID)
         
@@ -63,7 +62,7 @@ class ChatsController: UICollectionViewController, UICollectionViewDelegateFlowL
 
      
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 70)
+        return CGSize(width: view.frame.width, height: 80)
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -71,5 +70,9 @@ class ChatsController: UICollectionViewController, UICollectionViewDelegateFlowL
         let controller = ChatLogController(collectionViewLayout: layout)
         controller.friend = messages?[indexPath.item].user
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }

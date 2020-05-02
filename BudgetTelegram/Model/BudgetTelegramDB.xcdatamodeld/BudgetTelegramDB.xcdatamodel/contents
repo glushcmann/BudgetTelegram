@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Message" representedClassName="Message" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isSender" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="messages" inverseEntity="User"/>
     </entity>
@@ -11,7 +12,7 @@
         <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="user" inverseEntity="Message"/>
     </entity>
     <elements>
+        <element name="Message" positionX="-708.359375" positionY="-427.98828125" width="128" height="103"/>
         <element name="User" positionX="-943.32421875" positionY="-605.15234375" width="128" height="88"/>
-        <element name="Message" positionX="-708.359375" positionY="-427.98828125" width="128" height="88"/>
     </elements>
 </model>

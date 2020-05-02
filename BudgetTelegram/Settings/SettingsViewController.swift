@@ -40,7 +40,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Settings"
         self.view.backgroundColor = .white
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTapped))
         
     }

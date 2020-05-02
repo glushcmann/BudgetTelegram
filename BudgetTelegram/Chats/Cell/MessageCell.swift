@@ -10,13 +10,32 @@ import UIKit
 
 class MessageCell: BaseCell {
     
+    override var isHighlighted: Bool {
+        didSet {
+            backgroundColor = isHighlighted ? .systemBlue : .white
+            nameLabel.textColor = isHighlighted ? .white : .black
+            timeLabel.textColor = isHighlighted ? .white : .black
+            messageLabel.textColor = isHighlighted ? .white : .black
+        }
+    }
+    
     var message: Message? {
         didSet {
             nameLabel.text = message?.user?.name
             messageLabel.text = message?.text
             if let date = message?.date {
+                
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "h:mm a"
+                
+                let elapsedTimeInSeconds = Date().timeIntervalSince(date)
+                let secondInDay: TimeInterval = 60 * 60 * 24
+                if elapsedTimeInSeconds > 7 * secondInDay {
+                    dateFormatter.dateFormat = "dd/MM/yy"
+                } else if elapsedTimeInSeconds > secondInDay {
+                    dateFormatter.dateFormat = "EEE"
+                }
+                
                 timeLabel.text = dateFormatter.string(from: date)
             }
 
@@ -51,14 +70,12 @@ class MessageCell: BaseCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "cat"
         label.font = .systemFont(ofSize: 18 )
         return label
     }()
     
     let messageLabel: UILabel = {
         let label = UILabel()
-        label.text = "meow"
         label.textColor = .darkGray
         label.font = .systemFont(ofSize: 14)
         return label
@@ -66,7 +83,6 @@ class MessageCell: BaseCell {
     
     let timeLabel: UILabel = {
         let label = UILabel()
-        label.text = "12:05pm"
         label.textAlignment = .right
         label.textColor = .darkGray
         label.font = .systemFont(ofSize: 14)
@@ -78,28 +94,24 @@ class MessageCell: BaseCell {
         addSubview(profileImageView)
         addSubview(dividerLineView)
         
-        profileImageView.image = UIImage(named: "1")
-        hasReadImageView.image = UIImage(named: "1")
-        
         setupContainerView()
         
         addConstrint(withVisualFormat: "H:|-12-[v0(60)]", views: profileImageView)
         addConstrint(withVisualFormat: "V:[v0(60)]", views: profileImageView)
-        
         NSLayoutConstraint.activate([NSLayoutConstraint(item: profileImageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
         
         addConstrint(withVisualFormat: "H:|-82-[v0]|", views: dividerLineView)
-        addConstrint(withVisualFormat: "V:[v0(1)]|", views: dividerLineView)
+        addConstrint(withVisualFormat: "V:[v0(0.4)]|", views: dividerLineView)
     }
     
     private func setupContainerView() {
         
         let containerView = UIView()
-        addSubview(containerView )
+        addSubview(containerView)
         
         addConstrint(withVisualFormat: "H:|-90-[v0]|", views: containerView)
         addConstrint(withVisualFormat: "V:[v0(60)]", views: containerView)
-//        NSLayoutConstraint.activate([NSLayoutConstraint(item: containerView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
+        NSLayoutConstraint.activate([NSLayoutConstraint(item: containerView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
         
         containerView.addSubview(nameLabel)
         containerView.addSubview(messageLabel)
@@ -109,8 +121,9 @@ class MessageCell: BaseCell {
         containerView.addConstrint(withVisualFormat: "H:|[v0][v1(80)]-12-|", views: nameLabel, timeLabel)
         containerView.addConstrint(withVisualFormat: "V:|[v0][v1(30)]|", views: nameLabel, messageLabel)
         
-        containerView.addConstrint(withVisualFormat: "H:|[v0]-8-[v1(20)]-12-|", views: messageLabel, hasReadImageView)
-        containerView.addConstrint(withVisualFormat: "V:|[v0(20)]", views: timeLabel )
-        containerView.addConstrint(withVisualFormat: "V:[v0(20)]|", views: hasReadImageView)
+        containerView.addConstrint(withVisualFormat: "V:|[v0(20)]", views: timeLabel)
+        containerView.addConstrint(withVisualFormat: "H:|[v0]-5-[v1(20)]-12-|", views: messageLabel, hasReadImageView)
+        containerView.addConstrint(withVisualFormat: "V:[v0(20)]-5-|", views: hasReadImageView)
+        
     }
 }

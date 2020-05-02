@@ -20,6 +20,5 @@ class BaseCell: UICollectionViewCell {
     }
 
     func setupViews() {
-        backgroundColor = .blue
     }
 }
