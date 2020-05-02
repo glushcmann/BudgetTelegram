@@ -40,7 +40,7 @@ class CallsViewController: UIViewController {
         
         self.navigationItem.title = "Calls"
         self.view.backgroundColor = .white
-//        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editCallTapped))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "phone.badge.plus"),style: .plain, target: self, action: #selector(newCallTapped))
     }

@@ -8,25 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		1135253B244B32DE0057D734 /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135253A244B32DE0057D734 /* SettingsNavigationController.swift */; };
+		1153E45F245D965900B2DF98 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153E45E245D965900B2DF98 /* TabBarController.swift */; };
 		1163162C244F210A007E34E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1163162B244F210A007E34E3 /* Default-568h@2x.png */; };
 		1163162E244F367F007E34E3 /* ContactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163162D244F367F007E34E3 /* ContactsNavigationController.swift */; };
 		11631630244F38ED007E34E3 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163162F244F38ED007E34E3 /* AddContactViewController.swift */; };
 		11631632244F3D56007E34E3 /* CallsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631631244F3D56007E34E3 /* CallsNavigationController.swift */; };
 		11631634244F4E51007E34E3 /* NewCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631633244F4E51007E34E3 /* NewCallViewController.swift */; };
-		11631636244F516E007E34E3 /* ChatsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631635244F516E007E34E3 /* ChatsNavigationController.swift */; };
 		11631638244F5296007E34E3 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631637244F5296007E34E3 /* NewChatViewController.swift */; };
-		1187F1E324504A5300CCDF2A /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187F1E224504A5300CCDF2A /* Conversation.swift */; };
-		1187F1E624504A8600CCDF2A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187F1E524504A8600CCDF2A /* Message.swift */; };
-		1187F1E824504A9400CCDF2A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187F1E724504A9400CCDF2A /* User.swift */; };
-		1187F1EA24504AA000CCDF2A /* MediaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187F1E924504AA000CCDF2A /* MediaObject.swift */; };
-		1187F1EC24507F3200CCDF2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1187F1EB24507F3200CCDF2A /* GoogleService-Info.plist */; };
 		11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */; };
+		11DDAD34245C569000FF251C /* UIView+Constrints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DDAD33245C569000FF251C /* UIView+Constrints.swift */; };
+		11DDAD37245C56CE00FF251C /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DDAD36245C56CE00FF251C /* BaseCell.swift */; };
+		11DDAD39245C574000FF251C /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DDAD38245C574000FF251C /* MessageCell.swift */; };
+		11DDAD43245C60CD00FF251C /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DDAD42245C60CD00FF251C /* DataHelper.swift */; };
+		11DDAD5C245C6EA600FF251C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DDAD58245C6EA600FF251C /* User+CoreDataClass.swift */; };
+		11DDAD5D245C6EA600FF251C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DDAD59245C6EA600FF251C /* User+CoreDataProperties.swift */; };
+		11DDAD5E245C6EA600FF251C /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DDAD5A245C6EA600FF251C /* Message+CoreDataClass.swift */; };
+		11DDAD5F245C6EA600FF251C /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DDAD5B245C6EA600FF251C /* Message+CoreDataProperties.swift */; };
+		11DDAD61245CA76B00FF251C /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DDAD60245CA76B00FF251C /* ChatLogController.swift */; };
+		11E17FF9245AD5D700E96273 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E17FF8245AD5D700E96273 /* LoggedInViewController.swift */; };
+		11E17FFB245AD5E500E96273 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E17FFA245AD5E500E96273 /* LoginViewController.swift */; };
+		11E17FFE245ADA2700E96273 /* BudgetTelegramDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11E17FFC245ADA2700E96273 /* BudgetTelegramDB.xcdatamodeld */; };
+		11E18000245ADAB700E96273 /* UIViewController+HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E17FFF245ADAB700E96273 /* UIViewController+HideKeyboard.swift */; };
+		11E18003245ADC8300E96273 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E18002245ADC8300E96273 /* Keychain.swift */; };
+		11E18007245AE0E300E96273 /* KeychainKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E18006245AE0E300E96273 /* KeychainKeys.swift */; };
+		11E1800A245AEB3200E96273 /* LoggedInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E18009245AEB3200E96273 /* LoggedInViewModel.swift */; };
+		11E1800C245AEB4A00E96273 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E1800B245AEB4A00E96273 /* LoginViewModel.swift */; };
+		11E1800E245B093F00E96273 /* ChatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E1800D245B093F00E96273 /* ChatsController.swift */; };
 		11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */; };
 		11F2F738244B0C8100F6ECD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F2F737244B0C8100F6ECD2 /* Assets.xcassets */; };
 		11F2F73B244B0C8100F6ECD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F2F739244B0C8100F6ECD2 /* LaunchScreen.storyboard */; };
 		11F2F743244B12BD00F6ECD2 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F742244B12BD00F6ECD2 /* ContactsViewController.swift */; };
 		11F2F745244B12DF00F6ECD2 /* CallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F744244B12DF00F6ECD2 /* CallsViewController.swift */; };
-		11F2F747244B12ED00F6ECD2 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F746244B12ED00F6ECD2 /* ChatsViewController.swift */; };
 		11F2F749244B12FC00F6ECD2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2F748244B12FC00F6ECD2 /* SettingsViewController.swift */; };
 		CA718AB786B30A5106EA3DFE /* Pods_BudgetTelegram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8153EDE41B77AD5AE26E9CC /* Pods_BudgetTelegram.framework */; };
 /* End PBXBuildFile section */
@@ -34,19 +46,33 @@
 /* Begin PBXFileReference section */
 		112C2FD36C0F04D21AC60E43 /* Pods-BudgetTelegram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTelegram.release.xcconfig"; path = "Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram.release.xcconfig"; sourceTree = "<group>"; };
 		1135253A244B32DE0057D734 /* SettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
+		1153E45E245D965900B2DF98 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1163162B244F210A007E34E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1163162D244F367F007E34E3 /* ContactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNavigationController.swift; sourceTree = "<group>"; };
 		1163162F244F38ED007E34E3 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		11631631244F3D56007E34E3 /* CallsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsNavigationController.swift; sourceTree = "<group>"; };
 		11631633244F4E51007E34E3 /* NewCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCallViewController.swift; sourceTree = "<group>"; };
-		11631635244F516E007E34E3 /* ChatsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsNavigationController.swift; sourceTree = "<group>"; };
 		11631637244F5296007E34E3 /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
-		1187F1E224504A5300CCDF2A /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
-		1187F1E524504A8600CCDF2A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		1187F1E724504A9400CCDF2A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		1187F1E924504AA000CCDF2A /* MediaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaObject.swift; sourceTree = "<group>"; };
-		1187F1EB24507F3200CCDF2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11968EC72459FFF40078F6D5 /* BudgetTelegram.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BudgetTelegram.entitlements; sourceTree = "<group>"; };
 		11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		11DDAD33245C569000FF251C /* UIView+Constrints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constrints.swift"; sourceTree = "<group>"; };
+		11DDAD36245C56CE00FF251C /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		11DDAD38245C574000FF251C /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		11DDAD42245C60CD00FF251C /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		11DDAD58245C6EA600FF251C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		11DDAD59245C6EA600FF251C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		11DDAD5A245C6EA600FF251C /* Message+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		11DDAD5B245C6EA600FF251C /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		11DDAD60245CA76B00FF251C /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
+		11E17FF8245AD5D700E96273 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		11E17FFA245AD5E500E96273 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		11E17FFD245ADA2700E96273 /* BudgetTelegramDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetTelegramDB.xcdatamodel; sourceTree = "<group>"; };
+		11E17FFF245ADAB700E96273 /* UIViewController+HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboard.swift"; sourceTree = "<group>"; };
+		11E18002245ADC8300E96273 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		11E18006245AE0E300E96273 /* KeychainKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKeys.swift; sourceTree = "<group>"; };
+		11E18009245AEB3200E96273 /* LoggedInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewModel.swift; sourceTree = "<group>"; };
+		11E1800B245AEB4A00E96273 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		11E1800D245B093F00E96273 /* ChatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsController.swift; sourceTree = "<group>"; };
 		11F2F72B244B0C7D00F6ECD2 /* BudgetTelegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTelegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F2F737244B0C8100F6ECD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,7 +80,6 @@
 		11F2F73C244B0C8100F6ECD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F2F742244B12BD00F6ECD2 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		11F2F744244B12DF00F6ECD2 /* CallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsViewController.swift; sourceTree = "<group>"; };
-		11F2F746244B12ED00F6ECD2 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		11F2F748244B12FC00F6ECD2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7DF00357E323E0FB1267E616 /* Pods-BudgetTelegram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTelegram.debug.xcconfig"; path = "Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram.debug.xcconfig"; sourceTree = "<group>"; };
 		A8153EDE41B77AD5AE26E9CC /* Pods_BudgetTelegram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudgetTelegram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,9 +120,11 @@
 		1121D045244B3A2D0012DCF4 /* Chats */ = {
 			isa = PBXGroup;
 			children = (
-				11631635244F516E007E34E3 /* ChatsNavigationController.swift */,
-				11F2F746244B12ED00F6ECD2 /* ChatsViewController.swift */,
+				11DDAD35245C56B900FF251C /* Cell */,
+				11E1800D245B093F00E96273 /* ChatsController.swift */,
+				11DDAD60245CA76B00FF251C /* ChatLogController.swift */,
 				11631637244F5296007E34E3 /* NewChatViewController.swift */,
+				11DDAD42245C60CD00FF251C /* DataHelper.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -124,12 +151,52 @@
 		1187F1E424504A5900CCDF2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1187F1E224504A5300CCDF2A /* Conversation.swift */,
-				1187F1E524504A8600CCDF2A /* Message.swift */,
-				1187F1E724504A9400CCDF2A /* User.swift */,
-				1187F1E924504AA000CCDF2A /* MediaObject.swift */,
+				11DDAD58245C6EA600FF251C /* User+CoreDataClass.swift */,
+				11DDAD59245C6EA600FF251C /* User+CoreDataProperties.swift */,
+				11DDAD5A245C6EA600FF251C /* Message+CoreDataClass.swift */,
+				11DDAD5B245C6EA600FF251C /* Message+CoreDataProperties.swift */,
+				11E17FFC245ADA2700E96273 /* BudgetTelegramDB.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		11DDAD35245C56B900FF251C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				11DDAD36245C56CE00FF251C /* BaseCell.swift */,
+				11DDAD38245C574000FF251C /* MessageCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		11E17FF7245AD5A200E96273 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				11E18008245AEB1200E96273 /* ViewModel */,
+				11E17FF8245AD5D700E96273 /* LoggedInViewController.swift */,
+				11E17FFA245AD5E500E96273 /* LoginViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		11E18001245ADAC900E96273 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11E17FFF245ADAB700E96273 /* UIViewController+HideKeyboard.swift */,
+				11E18002245ADC8300E96273 /* Keychain.swift */,
+				11E18006245AE0E300E96273 /* KeychainKeys.swift */,
+				11DDAD33245C569000FF251C /* UIView+Constrints.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11E18008245AEB1200E96273 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11E18009245AEB3200E96273 /* LoggedInViewModel.swift */,
+				11E1800B245AEB4A00E96273 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		11F2F722244B0C7D00F6ECD2 = {
@@ -154,15 +221,18 @@
 		11F2F72D244B0C7D00F6ECD2 /* BudgetTelegram */ = {
 			isa = PBXGroup;
 			children = (
+				11968EC72459FFF40078F6D5 /* BudgetTelegram.entitlements */,
 				11F2F72E244B0C7D00F6ECD2 /* AppDelegate.swift */,
+				1153E45E245D965900B2DF98 /* TabBarController.swift */,
+				11E17FF7245AD5A200E96273 /* Onboarding */,
 				1121D046244B3A3E0012DCF4 /* Contacts */,
 				1121D044244B3A180012DCF4 /* Calls */,
 				1121D045244B3A2D0012DCF4 /* Chats */,
 				1121D043244B39FC0012DCF4 /* Settings */,
 				1187F1E424504A5900CCDF2A /* Model */,
+				11E18001245ADAC900E96273 /* Extensions */,
 				1121D047244B3A710012DCF4 /* Resources */,
 				11F2F73C244B0C8100F6ECD2 /* Info.plist */,
-				1187F1EB24507F3200CCDF2A /* GoogleService-Info.plist */,
 			);
 			path = BudgetTelegram;
 			sourceTree = "<group>";
@@ -173,7 +243,6 @@
 				7DF00357E323E0FB1267E616 /* Pods-BudgetTelegram.debug.xcconfig */,
 				112C2FD36C0F04D21AC60E43 /* Pods-BudgetTelegram.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -196,7 +265,6 @@
 				11F2F727244B0C7D00F6ECD2 /* Sources */,
 				11F2F728244B0C7D00F6ECD2 /* Frameworks */,
 				11F2F729244B0C7D00F6ECD2 /* Resources */,
-				1B91EB51CD2BF6A5477CE89E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,7 +314,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F2F73B244B0C8100F6ECD2 /* LaunchScreen.storyboard in Resources */,
-				1187F1EC24507F3200CCDF2A /* GoogleService-Info.plist in Resources */,
 				11F2F738244B0C8100F6ECD2 /* Assets.xcassets in Resources */,
 				1163162C244F210A007E34E3 /* Default-568h@2x.png in Resources */,
 			);
@@ -255,23 +322,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B91EB51CD2BF6A5477CE89E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A720231A5CB5802E917F9690 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,23 +351,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E17FFB245AD5E500E96273 /* LoginViewController.swift in Sources */,
 				1163162E244F367F007E34E3 /* ContactsNavigationController.swift in Sources */,
-				11631636244F516E007E34E3 /* ChatsNavigationController.swift in Sources */,
 				11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */,
+				1153E45F245D965900B2DF98 /* TabBarController.swift in Sources */,
 				11631634244F4E51007E34E3 /* NewCallViewController.swift in Sources */,
-				1187F1E824504A9400CCDF2A /* User.swift in Sources */,
-				1187F1E324504A5300CCDF2A /* Conversation.swift in Sources */,
-				11F2F747244B12ED00F6ECD2 /* ChatsViewController.swift in Sources */,
+				11E18007245AE0E300E96273 /* KeychainKeys.swift in Sources */,
 				11F2F745244B12DF00F6ECD2 /* CallsViewController.swift in Sources */,
+				11DDAD5D245C6EA600FF251C /* User+CoreDataProperties.swift in Sources */,
+				11DDAD5C245C6EA600FF251C /* User+CoreDataClass.swift in Sources */,
+				11E18000245ADAB700E96273 /* UIViewController+HideKeyboard.swift in Sources */,
+				11E17FF9245AD5D700E96273 /* LoggedInViewController.swift in Sources */,
+				11E1800C245AEB4A00E96273 /* LoginViewModel.swift in Sources */,
 				11631632244F3D56007E34E3 /* CallsNavigationController.swift in Sources */,
 				1135253B244B32DE0057D734 /* SettingsNavigationController.swift in Sources */,
-				1187F1EA24504AA000CCDF2A /* MediaObject.swift in Sources */,
 				11631630244F38ED007E34E3 /* AddContactViewController.swift in Sources */,
 				11F2F743244B12BD00F6ECD2 /* ContactsViewController.swift in Sources */,
 				11F2F749244B12FC00F6ECD2 /* SettingsViewController.swift in Sources */,
-				1187F1E624504A8600CCDF2A /* Message.swift in Sources */,
+				11E17FFE245ADA2700E96273 /* BudgetTelegramDB.xcdatamodeld in Sources */,
+				11DDAD5E245C6EA600FF251C /* Message+CoreDataClass.swift in Sources */,
+				11DDAD37245C56CE00FF251C /* BaseCell.swift in Sources */,
+				11DDAD5F245C6EA600FF251C /* Message+CoreDataProperties.swift in Sources */,
+				11E1800E245B093F00E96273 /* ChatsController.swift in Sources */,
+				11DDAD34245C569000FF251C /* UIView+Constrints.swift in Sources */,
+				11DDAD43245C60CD00FF251C /* DataHelper.swift in Sources */,
 				11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */,
 				11631638244F5296007E34E3 /* NewChatViewController.swift in Sources */,
+				11E18003245ADC8300E96273 /* Keychain.swift in Sources */,
+				11E1800A245AEB3200E96273 /* LoggedInViewModel.swift in Sources */,
+				11DDAD61245CA76B00FF251C /* ChatLogController.swift in Sources */,
+				11DDAD39245C574000FF251C /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +517,7 @@
 			baseConfigurationReference = 7DF00357E323E0FB1267E616 /* Pods-BudgetTelegram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BudgetTelegram/BudgetTelegram.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SV29KXS645;
 				INFOPLIST_FILE = "$(SRCROOT)/BudgetTelegram/Info.plist";
@@ -473,6 +537,7 @@
 			baseConfigurationReference = 112C2FD36C0F04D21AC60E43 /* Pods-BudgetTelegram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BudgetTelegram/BudgetTelegram.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SV29KXS645;
 				INFOPLIST_FILE = "$(SRCROOT)/BudgetTelegram/Info.plist";
@@ -497,7 +562,7 @@
 				11F2F73E244B0C8100F6ECD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		11F2F73F244B0C8100F6ECD2 /* Build configuration list for PBXNativeTarget "BudgetTelegram" */ = {
 			isa = XCConfigurationList;
@@ -506,9 +571,22 @@
 				11F2F741244B0C8100F6ECD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11E17FFC245ADA2700E96273 /* BudgetTelegramDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11E17FFD245ADA2700E96273 /* BudgetTelegramDB.xcdatamodel */,
+			);
+			currentVersion = 11E17FFD245ADA2700E96273 /* BudgetTelegramDB.xcdatamodel */;
+			path = BudgetTelegramDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 11F2F723244B0C7D00F6ECD2 /* Project object */;
 }
