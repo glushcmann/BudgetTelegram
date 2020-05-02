@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1135253B244B32DE0057D734 /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135253A244B32DE0057D734 /* SettingsNavigationController.swift */; };
 		1153E45F245D965900B2DF98 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153E45E245D965900B2DF98 /* TabBarController.swift */; };
 		1163162C244F210A007E34E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1163162B244F210A007E34E3 /* Default-568h@2x.png */; };
-		1163162E244F367F007E34E3 /* ContactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163162D244F367F007E34E3 /* ContactsNavigationController.swift */; };
 		11631630244F38ED007E34E3 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163162F244F38ED007E34E3 /* AddContactViewController.swift */; };
-		11631632244F3D56007E34E3 /* CallsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631631244F3D56007E34E3 /* CallsNavigationController.swift */; };
 		11631634244F4E51007E34E3 /* NewCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631633244F4E51007E34E3 /* NewCallViewController.swift */; };
 		11631638244F5296007E34E3 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11631637244F5296007E34E3 /* NewChatViewController.swift */; };
 		11C6B498244CC3A5001AC303 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */; };
@@ -45,12 +42,9 @@
 
 /* Begin PBXFileReference section */
 		112C2FD36C0F04D21AC60E43 /* Pods-BudgetTelegram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTelegram.release.xcconfig"; path = "Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram.release.xcconfig"; sourceTree = "<group>"; };
-		1135253A244B32DE0057D734 /* SettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
 		1153E45E245D965900B2DF98 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1163162B244F210A007E34E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		1163162D244F367F007E34E3 /* ContactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNavigationController.swift; sourceTree = "<group>"; };
 		1163162F244F38ED007E34E3 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
-		11631631244F3D56007E34E3 /* CallsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsNavigationController.swift; sourceTree = "<group>"; };
 		11631633244F4E51007E34E3 /* NewCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCallViewController.swift; sourceTree = "<group>"; };
 		11631637244F5296007E34E3 /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
 		11968EC72459FFF40078F6D5 /* BudgetTelegram.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BudgetTelegram.entitlements; sourceTree = "<group>"; };
@@ -100,7 +94,6 @@
 		1121D043244B39FC0012DCF4 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				1135253A244B32DE0057D734 /* SettingsNavigationController.swift */,
 				11F2F748244B12FC00F6ECD2 /* SettingsViewController.swift */,
 				11C6B497244CC3A5001AC303 /* EditProfileViewController.swift */,
 			);
@@ -110,7 +103,6 @@
 		1121D044244B3A180012DCF4 /* Calls */ = {
 			isa = PBXGroup;
 			children = (
-				11631631244F3D56007E34E3 /* CallsNavigationController.swift */,
 				11F2F744244B12DF00F6ECD2 /* CallsViewController.swift */,
 				11631633244F4E51007E34E3 /* NewCallViewController.swift */,
 			);
@@ -132,7 +124,6 @@
 		1121D046244B3A3E0012DCF4 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				1163162D244F367F007E34E3 /* ContactsNavigationController.swift */,
 				11F2F742244B12BD00F6ECD2 /* ContactsViewController.swift */,
 				1163162F244F38ED007E34E3 /* AddContactViewController.swift */,
 			);
@@ -352,7 +343,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				11E17FFB245AD5E500E96273 /* LoginViewController.swift in Sources */,
-				1163162E244F367F007E34E3 /* ContactsNavigationController.swift in Sources */,
 				11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */,
 				1153E45F245D965900B2DF98 /* TabBarController.swift in Sources */,
 				11631634244F4E51007E34E3 /* NewCallViewController.swift in Sources */,
@@ -363,8 +353,6 @@
 				11E18000245ADAB700E96273 /* UIViewController+HideKeyboard.swift in Sources */,
 				11E17FF9245AD5D700E96273 /* LoggedInViewController.swift in Sources */,
 				11E1800C245AEB4A00E96273 /* LoginViewModel.swift in Sources */,
-				11631632244F3D56007E34E3 /* CallsNavigationController.swift in Sources */,
-				1135253B244B32DE0057D734 /* SettingsNavigationController.swift in Sources */,
 				11631630244F38ED007E34E3 /* AddContactViewController.swift in Sources */,
 				11F2F743244B12BD00F6ECD2 /* ContactsViewController.swift in Sources */,
 				11F2F749244B12FC00F6ECD2 /* SettingsViewController.swift in Sources */,
