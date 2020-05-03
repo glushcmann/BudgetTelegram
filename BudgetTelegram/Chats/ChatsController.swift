@@ -21,6 +21,11 @@ class ChatsController: UICollectionViewController, UICollectionViewDelegateFlowL
     }
 
     private let cellID = "cellID"
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tabBarController?.tabBar.isHidden = false 
+    }
 
     override func viewDidLoad() {
         

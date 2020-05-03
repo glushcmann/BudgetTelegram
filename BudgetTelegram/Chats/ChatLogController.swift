@@ -20,13 +20,67 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         }
     }
     
+    let messageInputContainer: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(white: 0.96, alpha: 1)
+        return view
+    }()
+    
+    let inputTextField: UITextField = {
+        let textField  = UITextField()
+        textField.placeholder = "  Enter message"
+        textField.backgroundColor = .white
+        textField.layer.cornerRadius = 15
+        return textField
+    }()
+    
+    let leftItem: UIImageView = {
+        let item = UIImageView()
+        item.image = UIImage(systemName: "paperclip")
+        return item
+    }()
+    
+    let rightItem: UIImageView = {
+        let item = UIImageView()
+        item.image = UIImage(systemName: "mic")
+        return item
+    }()
+    
+    let dividerLine: UIView = {
+    let line = UIView()
+    line.backgroundColor = UIColor(white: 0.9, alpha: 1)
+    return line
+    }()
+    
     var messages: [Message]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tabBarController?.tabBar.isHidden = true
+        
         collectionView?.backgroundColor = .systemBackground
         collectionView?.register(ChatLogMessageCell.self, forCellWithReuseIdentifier: cellID )
+        
+        view.addSubview(messageInputContainer)
+        view.addConstrint(withVisualFormat: "H:|[v0]|", views: messageInputContainer)
+        view.addConstrint(withVisualFormat: "V:[v0(78)]|", views: messageInputContainer)
+        setupInputComponents()
+    }
+    
+    func setupInputComponents() {
+        
+        messageInputContainer.addSubview(inputTextField)
+        messageInputContainer.addSubview(leftItem)
+        messageInputContainer.addSubview(rightItem)
+        messageInputContainer.addSubview(dividerLine)
+        
+        messageInputContainer.addConstrint(withVisualFormat: "H:|-10-[v0(30)]-10-[v1]-10-[v2(30)]-10-|", views: leftItem, inputTextField, rightItem)
+        messageInputContainer.addConstrint(withVisualFormat: "V:|-10-[v0(30)]", views: leftItem)
+        messageInputContainer.addConstrint(withVisualFormat: "V:|-10-[v0(30)]", views: inputTextField)
+        messageInputContainer.addConstrint(withVisualFormat: "V:|-10-[v0(30)]", views: rightItem)
+        messageInputContainer.addConstrint(withVisualFormat: "V:|[v0(0.4)]", views: dividerLine)
+        messageInputContainer.addConstrint(withVisualFormat: "H:|[v0]|", views: dividerLine)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,8 +103,27 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
             let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
             let estimatedFrame = String(messageText).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)], context: nil)
             
-            cell.messageTextView.frame = CGRect(x: 45 + 8, y: 5, width: estimatedFrame.width + 16, height: estimatedFrame.height + 15 )
-            cell.textBubbleView.frame = CGRect(x: 45, y: 5, width: estimatedFrame.width + 16 + 8, height: estimatedFrame.height + 15 )
+            if !message.isSender {
+                
+                cell.messageTextView.frame = CGRect(x: 45 + 8, y: 10, width: estimatedFrame.width + 16, height: estimatedFrame.height + 15 )
+                cell.textBubbleView.frame = CGRect(x: 45, y: 10, width: estimatedFrame.width + 10, height: estimatedFrame.height + 15)
+                cell.profileImageView.isHidden = false
+                cell.messageTextView.textColor = .black
+                cell.bubbleImageView.tintColor = UIColor(white: 0.95, alpha: 1)
+                
+            } else {
+                
+                //outgoing sending message
+                cell.messageTextView.frame = CGRect(x: view.frame.width - estimatedFrame.width - 16 - 16, y: 5, width: estimatedFrame.width + 16, height: estimatedFrame.height + 15 )
+                cell.textBubbleView.frame = CGRect(x: view.frame.width - estimatedFrame.width - 16 - 16 - 8, y: 5, width: estimatedFrame.width + 16 + 8, height: estimatedFrame.height + 15 )
+                cell.profileImageView.isHidden = true
+//                cell.textBubbleView.backgroundColor = .systemBlue
+                cell.messageTextView.textColor = .white
+                cell.bubbleImageView.tintColor = .systemBlue
+                cell.bubbleImageView.image = UIImage(named: "bubble_sent")
+                
+            }
+        
         }
         return cell
         
@@ -63,47 +136,10 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
             let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
             let estimatedFrame = String(messageText).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)], context: nil)
             
-            return CGSize(width: view.frame.width, height: estimatedFrame.height + 15)
+            return CGSize(width: view.frame.width, height: estimatedFrame.height + 25)
         }
         
         return CGSize(width: view.frame.width, height: 90)
     }
     
-}
- 
-class ChatLogMessageCell: BaseCell {
-    
-    let messageTextView: UITextView = {
-        let textView = UITextView()
-        textView.font = .systemFont(ofSize: 16)
-        textView.backgroundColor = .clear
-        return textView
-    }()
-    
-    let textBubbleView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
-        view.layer.cornerRadius = 15
-        view.layer.masksToBounds = true
-        return view
-    }()
-    
-    let profileImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 15
-        imageView.layer.masksToBounds = true
-        return imageView
-    }()
-    
-    override func setupViews() {
-        super.setupViews()
-        
-        addSubview(textBubbleView)
-        addSubview(messageTextView)
-        
-        addSubview(profileImageView)
-        addConstrint(withVisualFormat: "H:|-6-[v0(30)]", views: profileImageView)
-        addConstrint(withVisualFormat: "V:[v0(30)]|", views: profileImageView)
-    }
 }

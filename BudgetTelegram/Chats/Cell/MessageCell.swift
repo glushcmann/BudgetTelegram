@@ -12,10 +12,10 @@ class MessageCell: BaseCell {
     
     override var isHighlighted: Bool {
         didSet {
-            backgroundColor = isHighlighted ? .systemBlue : .white
-            nameLabel.textColor = isHighlighted ? .white : .black
-            timeLabel.textColor = isHighlighted ? .white : .black
-            messageLabel.textColor = isHighlighted ? .white : .black
+            backgroundColor = isHighlighted ? .systemBlue : .systemBackground
+            nameLabel.textColor = isHighlighted ? .white : .darkGray
+            timeLabel.textColor = isHighlighted ? .white : .darkGray
+            messageLabel.textColor = isHighlighted ? .white : .darkGray
         }
     }
     

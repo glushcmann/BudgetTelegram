@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11208EC6245EDBF900550CEB /* ChatLogMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11208EC5245EDBF900550CEB /* ChatLogMessageCell.swift */; };
 		1153E45F245D965900B2DF98 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153E45E245D965900B2DF98 /* TabBarController.swift */; };
 		1163162C244F210A007E34E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1163162B244F210A007E34E3 /* Default-568h@2x.png */; };
 		11631630244F38ED007E34E3 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163162F244F38ED007E34E3 /* AddContactViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11208EC5245EDBF900550CEB /* ChatLogMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogMessageCell.swift; sourceTree = "<group>"; };
 		112C2FD36C0F04D21AC60E43 /* Pods-BudgetTelegram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTelegram.release.xcconfig"; path = "Target Support Files/Pods-BudgetTelegram/Pods-BudgetTelegram.release.xcconfig"; sourceTree = "<group>"; };
 		1153E45E245D965900B2DF98 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1163162B244F210A007E34E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				11DDAD36245C56CE00FF251C /* BaseCell.swift */,
 				11DDAD38245C574000FF251C /* MessageCell.swift */,
+				11208EC5245EDBF900550CEB /* ChatLogMessageCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			files = (
 				11E17FFB245AD5E500E96273 /* LoginViewController.swift in Sources */,
 				11F2F72F244B0C7D00F6ECD2 /* AppDelegate.swift in Sources */,
+				11208EC6245EDBF900550CEB /* ChatLogMessageCell.swift in Sources */,
 				1153E45F245D965900B2DF98 /* TabBarController.swift in Sources */,
 				11631634244F4E51007E34E3 /* NewCallViewController.swift in Sources */,
 				11E18007245AE0E300E96273 /* KeychainKeys.swift in Sources */,
