@@ -54,8 +54,25 @@ extension ChatsController {
         steve.profileImage = "3"
         createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
         createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
+        createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
+        createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
+        createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
+        createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
+        createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
+        createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
         
         //resronse message
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
         createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
         
     }
