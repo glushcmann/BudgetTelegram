@@ -10,13 +10,13 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    let layout = UICollectionViewFlowLayout()
+    static let layout = UICollectionViewFlowLayout()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        let chatsController = UINavigationController(rootViewController: ChatsController(collectionViewLayout: layout))
+        let chatsController = UINavigationController(rootViewController: ChatsController(collectionViewLayout: TabBarController.layout))
         chatsController.title = "Chats"
         chatsController.tabBarItem.image = UIImage(systemName: "message.fill")
         

@@ -19,9 +19,9 @@ class ChatLogMessageCell: BaseCell {
     
     let textBubbleView: UIView = {
         let view = UIView()
-//        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
-//        view.layer.cornerRadius = 15
-//        view.layer.masksToBounds = true
+        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        view.layer.cornerRadius = 15
+        view.layer.masksToBounds = true
         return view
     }()
     
@@ -33,12 +33,12 @@ class ChatLogMessageCell: BaseCell {
         return imageView
     }()
     
-    let bubbleImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "bubble_recieve")!.resizableImage(withCapInsets: UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18)).withRenderingMode(.alwaysTemplate)
-        imageView.tintColor = UIColor(white: 0.50, alpha: 1)
-        return imageView
-    }()
+//    let bubbleImageView: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.image = UIImage(named: "bubble_recieve")!.resizableImage(withCapInsets: UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18)).withRenderingMode(.alwaysTemplate)
+//        imageView.tintColor = UIColor(white: 0.50, alpha: 1)
+//        return imageView
+//    }()
     
     override func setupViews() {
         super.setupViews()
@@ -50,8 +50,8 @@ class ChatLogMessageCell: BaseCell {
         addConstrint(withVisualFormat: "H:|-6-[v0(30)]", views: profileImageView)
         addConstrint(withVisualFormat: "V:[v0(30)]|", views: profileImageView)
         
-        textBubbleView.addSubview(bubbleImageView)
-        addConstrint(withVisualFormat: "H:|[v0]|", views: bubbleImageView)
-        addConstrint(withVisualFormat: "V:|[v0]|", views: bubbleImageView)
+//        textBubbleView.addSubview(bubbleImageView)
+//        addConstrint(withVisualFormat: "H:|[v0]|", views: bubbleImageView)
+//        addConstrint(withVisualFormat: "V:|[v0]|", views: bubbleImageView)
     }
 }

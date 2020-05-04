@@ -12,10 +12,31 @@ class MessageCell: BaseCell {
     
     override var isHighlighted: Bool {
         didSet {
+            
+//            switch UIColor.systemBackground {
+//                case .black:
+//                    if isHighlighted {
+//                        backgroundColor = .systemGray
+//                    }
+//                    nameLabel.textColor = .white
+//                    timeLabel.textColor = .white
+//                    messageLabel.textColor = .white
+//                case .white:
+//                    if isHighlighted {
+//                        backgroundColor = .systemBlue
+//                    }
+//                    nameLabel.textColor = .black
+//                    timeLabel.textColor = .black
+//                    messageLabel.textColor = .black
+//                default:
+//                    break
+//            }
+
             backgroundColor = isHighlighted ? .systemBlue : .systemBackground
             nameLabel.textColor = isHighlighted ? .white : .darkGray
             timeLabel.textColor = isHighlighted ? .white : .darkGray
             messageLabel.textColor = isHighlighted ? .white : .darkGray
+            
         }
     }
     
@@ -76,7 +97,6 @@ class MessageCell: BaseCell {
     
     let messageLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .darkGray
         label.font = .systemFont(ofSize: 14)
         return label
     }()
@@ -84,7 +104,6 @@ class MessageCell: BaseCell {
     let timeLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .right
-        label.textColor = .darkGray
         label.font = .systemFont(ofSize: 14)
         return label
     }()

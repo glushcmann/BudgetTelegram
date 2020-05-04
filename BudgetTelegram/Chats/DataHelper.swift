@@ -21,19 +21,19 @@ extension ChatsController {
             let mark = NSEntityDescription.insertNewObject(forEntityName: "User" , into: context) as! User
             mark.name = "Mark"
             mark.profileImage = "1"
-            createMessageWithText(text: "hello its me kefhleri rgheroig  rihgrtoih grtihbrtio  tibh fbrbih hvperhr ropvirhep oribhrp bohrpthbp roighrtp rgoihrpo", user: mark, minutesAgo: 5, context: context)
+            ChatsController.createMessageWithText(text: "hello its me kefhleri rgheroig  rihgrtoih grtihbrtio  tibh fbrbih hvperhr ropvirhep oribhrp bohrpthbp roighrtp rgoihrpo", user: mark, minutesAgo: 5, context: context)
             
             createSteveMessagesWithContext(context: context )
             
             let donald = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
             donald.name = "Donald"
             donald.profileImage = "2"
-            createMessageWithText(text: "efjpwjghvoeuh fbhvoirb ireugheri p  iuroehgreio", user: donald, minutesAgo: 60*24, context: context)
+            ChatsController.createMessageWithText(text: "efjpwjghvoeuh fbhvoirb ireugheri p  iuroehgreio", user: donald, minutesAgo: 60*24, context: context)
             
             let gandhi = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
             gandhi.name = "Gandi"
             gandhi.profileImage = "2"
-            createMessageWithText(text: "efjpwjghvoeuh", user: gandhi , minutesAgo: 60*24*8, context: context)
+            ChatsController.createMessageWithText(text: "efjpwjghvoeuh", user: gandhi , minutesAgo: 60*24*8, context: context)
              
             
             do {
@@ -52,39 +52,42 @@ extension ChatsController {
         let steve = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
         steve.name = "Steve"
         steve.profileImage = "3"
-        createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
-        createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
-        createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
-        createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
-        createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
-        createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
-        createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
-        createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
+        ChatsController.createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
+        ChatsController.createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
+        ChatsController.createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
+        ChatsController.createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
+        ChatsController.createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
+        ChatsController.createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
+        ChatsController.createMessageWithText(text: "hi 1 heiroubhrei", user: steve, minutesAgo: 2, context: context)
+        ChatsController.createMessageWithText(text: "hi 2 hfibhrpto", user: steve, minutesAgo: 1, context: context)
         
         //resronse message
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
-        createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
+        ChatsController.createMessageWithText(text: "answer", user: steve, minutesAgo: 0, context: context, isSender: true)
         
     }
     
-    func createMessageWithText(text: String, user: User, minutesAgo: Double, context: NSManagedObjectContext, isSender: Bool = false) {
+    static func createMessageWithText(text: String, user: User, minutesAgo: Double, context: NSManagedObjectContext, isSender: Bool = false) -> Message {
+        
         let message = NSEntityDescription.insertNewObject(forEntityName: "Message" , into: context) as! Message
         message.user = user
         message.text = text
         message.date = NSDate().addingTimeInterval(-minutesAgo*60) as Date?
         message.isSender = NSNumber(value: isSender) as! Bool
+        return message
+        
     }
-    
+     
     func clearData() {
         
         let delegate = UIApplication.shared.delegate as? AppDelegate

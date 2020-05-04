@@ -30,7 +30,6 @@ class ChatsController: UICollectionViewController, UICollectionViewDelegateFlowL
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
         self.navigationItem.title = "Chats"
 //        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editChatTapped))
@@ -71,8 +70,8 @@ class ChatsController: UICollectionViewController, UICollectionViewDelegateFlowL
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let layout = UICollectionViewFlowLayout()
-        let controller = ChatLogController(collectionViewLayout: layout)
+//        let layout = UICollectionViewFlowLayout()
+        let controller = ChatLogController(collectionViewLayout: TabBarController.layout)
         controller.friend = messages?[indexPath.item].user
         navigationController?.pushViewController(controller, animated: true)
     }
