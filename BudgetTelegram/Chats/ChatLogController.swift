@@ -9,9 +9,9 @@
 import UIKit
 import CoreData
 
-class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
     
-    private let cellID = "celID"
+    private let cellID = "cellID"
     
     var friend: User? {
         didSet {
@@ -35,18 +35,6 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         return textField
     }()
     
-//    let leftItem: UIImageView = {
-//        let item = UIImageView()
-//        item.image = UIImage(systemName: "paperclip")
-//        return item
-//    }()
-    
-//    let rightItem: UIImageView = {
-//        let item = UIImageView()
-//        item.image = UIImage(systemName: "mic")
-//        return item
-//    }()
-    
     let dividerLine: UIView = {
         let line = UIView()
         line.backgroundColor = UIColor(white: 0.85, alpha: 1)
@@ -64,17 +52,16 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     
     var bottomConstraint: NSLayoutConstraint?
     var collectionViewContraint: NSLayoutConstraint?
+    var blockOperations = [BlockOperation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         do {
             try fetchedResultController.performFetch()
-            print(fetchedResultController.sections?[0].numberOfObjects)
         } catch let error {
             print(error )
         }
-        
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Simulate", style: .plain, target: self, action: #selector(simulate))
  
@@ -94,9 +81,6 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         
         setupInputComponents()
         
-        
-        collectionView?.setCollectionViewLayout(TabBarController.layout, animated: false)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -108,15 +92,41 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let contex = delegate.persistentContainer.viewContext
         let fetch = NSFetchedResultsController(fetchRequest: request, managedObjectContext: contex, sectionNameKeyPath: nil, cacheName: nil)
+        fetch.delegate = self
         return fetch
     }()
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        if type == .insert {
+            blockOperations.append(BlockOperation(block: {
+                self.collectionView.insertItems(at: [newIndexPath!])
+            }))
+        }
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        collectionView.performBatchUpdates({
+            
+            for operation in self.blockOperations {
+                operation.start()
+            }
+            
+        }, completion: { (completed) in
+            
+            let lastItem = self.fetchedResultController.sections![0].numberOfObjects - 1
+            let indexPath = IndexPath(item: lastItem, section: 0)
+            self.collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
+            
+        })
+    }
     
     @objc func simulate() {
         
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let contex = delegate.persistentContainer.viewContext
         
-        ChatsController.createMessageWithText(text:  "Here is text message that was sent few minutes ago...", user: friend!, minutesAgo: 1, context: contex )
+        ChatsController.createMessageWithText(text:  "Here is text message that was sent few minutes ago...", user: friend!, minutesAgo: 1, context: contex)
+        ChatsController.createMessageWithText(text:  "Here is another text message that was sent few minutes ago...", user: friend!, minutesAgo: 1, context: contex)
         
         do {
             try contex.save()
@@ -138,8 +148,9 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
                 
             }, completion: { (completed) in
                 
-//                let indexPath = IndexPath(item: self.messages!.count - 1, section: 0)
-//                self.collectionView?.scrollToItem(at: indexPath as IndexPath, at: .bottom, animated: true)
+                let lastItem = self.fetchedResultController.sections![0].numberOfObjects - 1
+                let indexPath = IndexPath(item: lastItem, section: 0)
+                self.collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
                 
             })
             
@@ -167,9 +178,6 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         messageInputContainer.addSubview(sendButton)
         messageInputContainer.addSubview(dividerLine)
         
-        //        messageInputContainer.addSubview(leftItem)
-        //        messageInputContainer.addSubview(rightItem)
-        
         messageInputContainer.addConstrint(withVisualFormat: "H:|-10-[v0]-10-[v1(60)]-10-|", views: inputTextField, sendButton)
         messageInputContainer.addConstrint(withVisualFormat: "V:|-10-[v0]-40-|", views: inputTextField)
         messageInputContainer.addConstrint(withVisualFormat: "V:|-10-[v0]-40-|", views: sendButton)
@@ -177,10 +185,9 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         messageInputContainer.addConstrint(withVisualFormat: "V:|[v0(0.6)]", views: dividerLine)
         messageInputContainer.addConstrint(withVisualFormat: "H:|[v0]|", views: dividerLine)
         
-        //        messageInputContainer.addConstrint(withVisualFormat: "V:|-10-[v0]-10-|", views: leftItem)
-        //        messageInputContainer.addConstrint(withVisualFormat: "V:|-10-[v0]-10-|", views: rightItem)
-        
     }
+    
+    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let count = fetchedResultController.sections?[0].numberOfObjects {
@@ -194,7 +201,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! ChatLogMessageCell
         
         let message = fetchedResultController.object(at: indexPath) as! Message
-        cell.messageTextView.text = message .text
+        cell.messageTextView.text = message.text
         
         if let messageText = message.text, let profileImage = message.user?.profileImage {
             
@@ -211,7 +218,6 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
                 cell.profileImageView.isHidden = false
                 cell.messageTextView.textColor = .black
                 cell.textBubbleView.backgroundColor = UIColor(white: 0.95, alpha: 1)
-//                cell.textBubbleView.tintColor = UIColor(white: 0.95, alpha: 1)
                 
             } else {
                 
@@ -221,8 +227,6 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
                 cell.profileImageView.isHidden = true
                 cell.textBubbleView.backgroundColor = .systemBlue
                 cell.messageTextView.textColor = .white
-//                cell.textBubbleView.tintColor = .systemBlue
-//                cell.bubbleImageView.image = UIImage(named: "bubble_sent")
                 
             }
         

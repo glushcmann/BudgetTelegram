@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  BudgetTelegram
 //
-//  Created by Никита on 02.05.2020.
+//  Created by Никита on 05.05.2020.
 //  Copyright © 2020 Nikita Glushchenko. All rights reserved.
 //
 //
@@ -19,6 +19,7 @@ extension User {
 
     @NSManaged public var name: String?
     @NSManaged public var profileImage: String?
+    @NSManaged public var lastMessage: Message?
     @NSManaged public var messages: NSSet?
 
 }

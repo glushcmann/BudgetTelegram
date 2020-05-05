@@ -2,7 +2,7 @@
 //  Message+CoreDataProperties.swift
 //  BudgetTelegram
 //
-//  Created by Никита on 02.05.2020.
+//  Created by Никита on 05.05.2020.
 //  Copyright © 2020 Nikita Glushchenko. All rights reserved.
 //
 //
@@ -18,8 +18,8 @@ extension Message {
     }
 
     @NSManaged public var date: Date?
-    @NSManaged public var text: String?
     @NSManaged public var isSender: Bool
+    @NSManaged public var text: String?
     @NSManaged public var user: User?
 
 }
